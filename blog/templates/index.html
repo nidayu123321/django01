@@ -11,6 +11,28 @@
     <h3>your sex is {{user.sex}}</h3>
     <div>{{user.say}}</div>
     <h4>{{book_list}}</h4>
+
+    <!--if else的使用-->
+    {% if user %}
+        <li>user name is {{user.name}}</li>
+    {% else %}
+        <li>用户不存在</li>
+    {% endif %}
+
+    <!--for的使用-->
+    {% for book in book_list %}
+        <li>{{book}}</li>
+    {% endfor %}
     <h4>{{book_list.0}}</h4>
+
+    <!--取出字典的key-->
+    {% for key in zidian %}
+        <li>{{key}}</li>
+    {% endfor %}
+
+    <!--对字典进行操作-->
+    {% for key,value in zidian.items %}
+        <li>{{forloop.counter}}.{{key}}: {{value}}</li>
+    {% endfor %}
 </body>
 </html>
