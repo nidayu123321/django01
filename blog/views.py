@@ -41,3 +41,10 @@ def index(req):
         'book_list': book_list,
         'zidian': zidian
     })
+
+
+def param(req, id):
+    return render_to_response('param_test.html', {
+        'title': 'django_test',
+        'id': id
+    })

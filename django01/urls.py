@@ -13,10 +13,16 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
+# -*- coding: UTF-8 -*-
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from blog.views import index, param
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/index/$', 'blog.views.index'),
+    # url(r'^blog/index/$', 'blog.views.index'),
+    url(r'^blog/index/$', index),
+    url(r'^blog/param/(?P<id>\d{2})/$', param),
+    url(r'^blog/param/(\d{2})/$', param),
 ]
