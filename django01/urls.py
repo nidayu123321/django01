@@ -18,6 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    # 配置blog的url路径 在项目下启动 python manage.py runserver
     url(r'^blog/index/$', 'blog.views.index'),
 ]
