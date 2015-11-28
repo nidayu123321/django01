@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>django01</title>
+    <meta content="text/html" charset="UTF-8">
+    <title>{{title}}</title>
 </head>
 <body>
-    <h3>hello, 倪达玉</h3>
-    <h1>welcome to django! ok</h1>
+    <h3>hello, {{user.name}}</h3>
+    <h1>welcome to django!</h1>
+    <h3>your age is {{user.age}}</h3>
+    <h3>your sex is {{user.sex}}</h3>
+    <div>{{user.say}}</div>
+    <h4>{{book_list}}</h4>
+    <h4>{{book_list.0}}</h4>
 </body>
 </html>
